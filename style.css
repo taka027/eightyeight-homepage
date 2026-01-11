@@ -1,0 +1,274 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #5b4b8a 0%, #6b5b9a 100%);
+    color: white;
+    padding: 40px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.company-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+.nav {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 0;
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 15px 30px;
+}
+
+.nav-item:hover {
+    background-color: #f8f8f8;
+    border-bottom-color: #5b4b8a;
+}
+
+.nav-item.active {
+    background-color: #f0f0f0;
+    border-bottom-color: #5b4b8a;
+    font-weight: 600;
+}
+
+/* Main Content */
+.main {
+    padding: 40px 0;
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #5b4b8a;
+    display: inline-block;
+}
+
+/* Company Info Section */
+.company-info {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.info-value {
+    color: #333;
+}
+
+/* Business Section */
+.business {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.business-content p {
+    line-height: 2;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.business-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Product Banner Section */
+.product-banner {
+    margin-bottom: 40px;
+}
+
+.banner-link {
+    text-decoration: none;
+    display: block;
+}
+
+.banner {
+    background: linear-gradient(135deg, #4a9eff 0%, #5ba8ff 100%);
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(74, 158, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(74, 158, 255, 0.4);
+}
+
+.banner-content {
+    color: white;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.banner-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.banner-cta {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.banner:hover .banner-cta {
+    background-color: white;
+    color: #4a9eff;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 1.8rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item a {
+        padding: 12px 20px;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .info-label {
+        font-size: 0.9rem;
+        color: #888;
+    }
+
+    .company-info,
+    .business {
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .banner {
+        padding: 30px 20px;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-description {
+        font-size: 1rem;
+    }
+
+    .achievements-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding: 25px 0;
+    }
+
+    .banner-title {
+        font-size: 1.6rem;
+    }
+}
