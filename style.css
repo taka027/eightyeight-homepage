@@ -121,6 +121,37 @@ body {
     color: #333;
 }
 
+.external-link {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 4px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.note-link {
+    background-color: #111;
+}
+
+.note-link:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(17, 17, 17, 0.3);
+}
+
+.qiita-link {
+    background-color: #55C500;
+}
+
+.qiita-link:hover {
+    background-color: #6DD400;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(85, 197, 0, 0.3);
+}
+
 /* Business Section */
 .business {
     background-color: white;
